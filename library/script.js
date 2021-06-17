@@ -47,6 +47,9 @@ overlay.addEventListener('click',function() {
 })
 
 
+
+off()
+
 let b1 = new Book("Anna",121)
 addBookToLibrary(b1)
 addBookToLibrary(b1)
