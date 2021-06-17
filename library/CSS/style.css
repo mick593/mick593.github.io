@@ -1,27 +1,42 @@
 .books-container {
     height: 100rem;
     background-color: beige;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 .book {
-    background-color: #f4f4f4;
+    background-color: #a1a1a1;
     width: 20%;
     height: 10rem;
     margin: 5px 5px;
     float: left;
     white-space: pre-line;
     padding: .75rem 1rem;
+    position:relative
 }
 
 #new-book-btn {
+    position: fixed;
+    top: 0;
+    right: 1px;
+    
     border: none;
-    align-items: flex-end;
-    float: right;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
     /* box-sizing: border-box; */
 }
 
+#new-book-btn:hover {
+    position: fixed;
+    top: 0;
+    right: 1px;
+    color: cadetblue;
+    border: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+    /* box-sizing: border-box; */
+}
 #overlay {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
@@ -52,3 +67,25 @@
     cursor:default;
     padding: 10px 20px;
   }
+
+  .remove-btn {
+     
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      border:none;
+      background-color: none;
+      
+      
+  }
+
+  .remove-btn:hover {
+     
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border:none;
+    background-color: red;
+    
+    
+}
