@@ -6,7 +6,7 @@ function Book(name, pages) {
   this.pages = pages 
   this.added = false;
   this.id = idCount++
-
+  this.read = false
 }
 
 function addBookToLibrary(book) {
@@ -24,7 +24,7 @@ function displayBooks() {
             let card = document.createElement('div')
             card.classList.add('book')
             card.value = e.id
-            card.textContent = 'Title : ' + e['name'] + '\n' + 'Pages : ' + e['pages'] 
+            card.textContent = 'Title : ' + e['name'] + '\n' + 'Pages : ' + e['pages'] + '\n' + 'Done : '
 
             let removeBtn = document.createElement('button')
 
@@ -33,10 +33,20 @@ function displayBooks() {
                 container.removeChild(card)
             })
 
+            let readBtn = document.createElement('input');
+            readBtn.addEventListener('click',function(){
+                e.read = readBtn.checked
+            })
+
             removeBtn.textContent = 'X'
             card.appendChild(removeBtn)
             removeBtn.classList.add('remove-btn')
             removeBtn.value = e.id
+
+            readBtn.type='checkbox'
+            readBtn.textContent = 'done'
+            card.appendChild(readBtn)
+
             console.log(removeBtn.value)
             
             container.appendChild(card)
@@ -97,7 +107,7 @@ submitBtn.addEventListener('click', function() {
 
 off()
 
-let b1 = new Book("Anna",121)
+let b1 = new Book("Book1",500)
 addBookToLibrary(b1)
 
 
