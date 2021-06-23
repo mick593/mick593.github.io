@@ -12,6 +12,13 @@
     float: left;
     border :2px solid rgb(68, 68, 26);
     box-sizing: border-box;
+    
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 .field-tick {
     width: 33%;
@@ -34,4 +41,22 @@
     height: 300px;
     width: 300px;
     margin: auto;
+}
+
+.result-board {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    color: rgb(235, 50, 96);
+    transform: scale(0);
+    /* z-index: 2; */
+    
+}
+
+.winner-text {
+    color: rgb(235, 50, 96);
+}
+
+.result-popup {
+    transform: scale(1);
 }
