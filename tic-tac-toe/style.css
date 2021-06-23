@@ -12,7 +12,8 @@
     float: left;
     border :2px solid rgb(68, 68, 26);
     box-sizing: border-box;
-    
+    font-size:230%;
+    color: darkblue;
 
 
     display: flex;
