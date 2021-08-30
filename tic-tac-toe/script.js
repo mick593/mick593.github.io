@@ -45,8 +45,22 @@ const gameboard = (() => {
     }
 
     const changePlayer = () => {
-        if (playerMarker == 'x') playerMarker = 'o'
-        else playerMarker = 'x'
+        if (playerMarker == 'o') playerMarker = 'x'
+        else {
+            playerMarker = 'o'
+            randomPick()
+        }
+    }
+
+    const randomPick = () => {
+        while(!isGameOver) {
+            let pick = Math.floor((Math.random()*10000))%9
+            console.log('pick ' + pick)
+            if(!blocks[pick]['marker']) {
+                occupyBlock(pick)
+                return
+            }
+        }
     }
 
     const checkWinner = () => {
